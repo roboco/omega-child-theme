@@ -1,0 +1,164 @@
+.site-logo {
+  width: 137px;
+  height: 61px;
+  background: url("/sites/all/themes/custom_themes/omega_child/images/logo.svg");
+  background-image: url('/sites/all/themes/custom_themes/omega_child/images/logo.svg'), none;
+  background-repeat: no-repeat;
+}
+
+@mixin rounded($radius: 3px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin single-transition($property: all, $speed:300ms, $ease:ease-out) {
+  -webkit-transition: $property $speed $ease;
+     -moz-transition: $property $speed $ease;
+          transition: $property $speed $ease;
+}
+
+@mixin box {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+          box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+@mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
+  display: block;
+  width: 0;
+  height: 0;
+  content: "";
+  border: inset $triangle-size;
+  @if ($triangle-direction == top) {
+    border-color: $triangle-color transparent transparent transparent;
+    border-top-style: solid;
+  }
+  @if ($triangle-direction == bottom) {
+    border-color: transparent transparent $triangle-color transparent;
+    border-bottom-style: solid;
+  }
+  @if ($triangle-direction == left) {
+    border-color: transparent transparent transparent $triangle-color;
+    border-left-style: solid;
+  }
+  @if ($triangle-direction == right) {
+    border-color: transparent $triangle-color transparent transparent;
+    border-right-style: solid;
+  }
+}
+
+@mixin side-radius($side, $radius: 3px) {
+  @if $side == left {
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-radius-topleft: $radius;
+            border-top-left-radius: $radius;
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-radius-bottomleft: $radius;
+            border-bottom-left-radius: $radius;
+  }
+  @else if $side == right {
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-radius-topright: $radius;
+            border-top-right-radius: $radius;
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-radius-bottomright: $radius;
+            border-bottom-right-radius: $radius;
+  }
+  @else if $side == top {
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-radius-topleft: $radius;
+            border-top-left-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-radius-topright: $radius;
+            border-top-right-radius: $radius;
+  }
+  @else if $side == bottom {
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-radius-bottomright: $radius;
+            border-bottom-right-radius: $radius;
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-radius-bottomleft: $radius;
+            border-bottom-left-radius: $radius;
+  }
+}
+
+
+@mixin link($color, $padding: "") {
+  @if ($color == white) {
+    a {
+      color: $white;
+    }
+    a:hover {
+      color: $red;
+    }
+  }
+  @if ($color == white-grey) {
+    a {
+      color: $white;
+    }
+    a:hover {
+      color: $grey;
+    }
+  }
+  @if ($color == red) {
+    a {
+      color: $red;
+    }
+    a:hover {
+      color: black;
+    }
+  }
+  @if ($color == red-white) {
+    a {
+      color: $red;
+    }
+    a:hover {
+      color: $white;
+    }
+  }
+  @if ($color == grey) {
+    a {
+      color: $darkgrey;
+    }
+    a:hover {
+      color: $red;
+    }
+  }
+  @if ($color == buy) {
+    a {
+      padding: $padding;
+      color: $white;
+      background: $red;
+    }
+    a:hover {
+      color: $red;
+      background: $white;
+    }
+  }
+}
+
+@mixin link-icon($size: 25px, $padding-left:0) {
+  a {
+    display: table;
+    width: $size;
+    height: $size;
+    text-align: center;
+    background: $darkblue;
+
+    @include rounded($radius: 50%);
+    i {
+      display: table-cell;
+      padding-left: $padding-left;
+      text-align: center;
+      vertical-align: middle;
+      color: $white;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+
+      @include single-transition;
+    }
+  }
+}

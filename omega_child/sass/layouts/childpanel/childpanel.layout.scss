@@ -1,0 +1,137 @@
+/*******************************************************************************
+ * childpanel.layout.scss
+ *
+ * Styling of the "childpanel" panels content layout.
+ ******************************************************************************/
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+// @import "clearfix"
+
+// Set consistent vertical and horizontal spacing units.
+$vert-spacing-unit: 0;
+$horz-spacing-unit: 1em;
+
+// Set breakpoint values.
+$tab: 700px;
+$desk: 1250px;
+
+// Set Singularity grid variables.
+$grids: 2;
+$grids: add-grid(12 at $tab);
+
+/* $grids: add-grid(12 at $desk); */
+
+$gutters: 1/5;
+
+.panel-display--childpanel {
+  // @include background-grid;
+  // @include pie-clearfix;
+}
+
+.childpanel-region {
+  margin-bottom: $vert-spacing-unit;
+}
+
+@include breakpoint($tab) {
+  .childpanel-region--top {
+    @include grid-span(12);
+  }
+  .childpanel-region--fullpage {
+    @include grid-span(12);
+  }
+  .childpanel-region--main {
+    @include isolation-span(8, 1, both);
+  }
+  .childpanel-region--secondary {
+    @include grid-span(4, 9);
+  }
+  .childpanel-region--onethird {
+    @include isolation-span(4, 1, both);
+  }
+  .childpanel-region--twothird {
+    @include grid-span(4, 5);
+  }
+  .childpanel-region--threethird {
+    @include grid-span(4, 9);
+  }
+  .childpanel-region--onespan {
+    @include isolation-span(4, 1, both);
+  }
+  .childpanel-region--twospan {
+    @include grid-span(8, 5);
+  }
+  .childpanel-region--threespan {
+    @include isolation-span(12, 1, both);
+  }
+  .childpanel-region--2ndtwospan {
+    @include isolation-span(8, 1, both);
+  }
+  .childpanel-region--2ndonespan {
+    @include grid-span(4, 9);
+  }
+  .childpanel-region--fourthird {
+    @include isolation-span(4, 1, both);
+  }
+  .childpanel-region--fifththird {
+    @include grid-span(4, 5);
+  }
+  .childpanel-region--sixththird {
+    @include grid-span(4, 9);
+  }
+  .childpanel-region--totalspan {
+    @include isolation-span(12, 1, both);
+  }
+  .childpanel-region--split1 {
+    @include isolation-span(6, 1, both);
+  }
+  .childpanel-region--split2 {
+    @include grid-span(6, 7);
+  }
+  .childpanel-region--split3 {
+    @include isolation-span(6, 1, both);
+  }
+  .childpanel-region--split4 {
+    @include grid-span(6, 7);
+  }
+  .childpanel-region--bottom {
+    @include grid-span(12);
+  }
+  .front {
+    .childpanel-region--split1 {
+      overflow: hidden;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 53%;
+      height: 510px;
+      margin-left: -20px;
+      padding: 20px;
+      background: white;
+    }
+    .childpanel-region--split2 {
+      overflow: hidden;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 53%;
+      height: 510px;
+      margin-right: -20px;
+      padding: 20px;
+      background: white;
+    }
+  }
+}
+
+
+
+@include breakpoint($desk, true) {
+  .front {
+    .childpanel-region--split1 {
+      height: 408px;
+    }
+    .childpanel-region--split2 {
+      height: 408px;
+    }
+  }
+}

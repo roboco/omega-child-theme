@@ -1,0 +1,22 @@
+.pager {
+  .pager__item {
+    padding: 3px;
+    a {
+      padding: 8px 10px;
+      color: $darkgrey;
+      background: $bodybgcolor;@include rounded;
+    }
+    a:hover {
+      color: $lightgrey;
+      background: $darkblue;
+    }
+    &.pager__item--current {
+      padding: 8px 10px;
+      color: $lightgrey;
+      background: $darkblue;@include rounded;
+    }
+    &.pager__item--ellipsis {
+      display: none;
+    }
+  }
+}

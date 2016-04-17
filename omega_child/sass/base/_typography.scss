@@ -1,0 +1,62 @@
+body {
+  font-family: $fonts;
+}
+
+$small-size: 12px;
+$default-size: 14px;
+$large-size: 17px;
+
+a {
+  text-decoration: none;
+  word-break: break-word;
+  color: $lightblue;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h1 {
+  color: $white;
+  font-size: 3em;
+  font-weight: 300;
+}
+h2 {
+  margin-top: 0;
+  color: $textcolor;
+  font-size: 1.500em;
+  font-weight: $bold;
+}
+h3 {
+  margin: 0; 
+  color: $darkblue;
+  font-size: 1.17em;
+  font-weight: 500;
+}
+h4 {
+  margin: 0; 
+  color: $darkblue;
+  font-size: 1em;
+  font-weight: 400;
+}
+h5 {
+  margin: 0;
+  color: $darkblue;
+  font-size: 0.83em;
+  font-weight: 400;
+}
+h6 {
+  margin: 0;
+  color: $darkblue;
+  font-size: 0.75em;
+  font-weight: 400;
+}

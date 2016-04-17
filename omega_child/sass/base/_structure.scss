@@ -1,0 +1,93 @@
+@import "susy";
+// Susy Variables
+$tab: 44em 12; // At 44em use 12 columns.
+$desk: 70em 12; // At 70em use 12 columns.
+
+body {
+  background: $bodybgcolor;
+}
+.front {
+  background-color: $darkergrey;
+  .childpanel-region {
+    margin-bottom: 20px;
+    &:after {
+      display: table;
+      content: " ";
+    }
+  }
+  .childpanel-region--split1,
+  .childpanel-region--split2 {
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 20px;
+    border-top: 1px solid $darkergrey;
+    border-bottom: 1px solid $darkergrey;
+    background: #fff;
+    h2 {
+      margin-top: 0;
+    }
+  }
+  .l-main {
+    background: url("../images/pattern.png") $bodybgcolor;
+  }
+}
+
+.l-header,
+.l-main,
+.l-footer {
+  background-color: white;
+}
+
+.l-main {
+  padding-bottom: 15px;
+}
+
+header {
+  border-top: 5px solid $red;
+}
+
+//fix to full screen banner
+
+.site-logo {
+  display: block;
+  margin: 10px 0;
+}
+
+.l-region--header {
+  .header_elements {
+    position: relative;
+    float: right;
+    margin-top: -80px;
+    div,
+    nav {
+      float: left;
+    }
+    .block--block-3 {
+      clear: left;
+      margin-left: 18px;
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid $darkergrey;
+}
+
+@include at-breakpoint($tab) {
+  //this will need adjusts to allow for more elements to be added to the header area.
+  .l-region--header {
+    .header_elements {
+      left: 0;
+      float: right;
+      margin-top: 0;
+      div,
+      nav {
+        float: left;
+      }
+      .block--block-3 {
+        clear: none;
+        margin-left: 0;
+      }
+    }
+  }
+}

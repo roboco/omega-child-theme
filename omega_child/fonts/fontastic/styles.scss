@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "omegachild";
+  src:url("../fonts/fontastic/fonts/omegachild.eot");
+  src:url("../fonts/fontastic/fonts/omegachild.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/fontastic/fonts/omegachild.woff") format("woff"),
+    url("../fonts/fontastic/fonts/omegachild.ttf") format("truetype"),
+    url("../fonts/fontastic/fonts/omegachild.svg#omegachild") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[data-icon]:before {
+  font-family: "omegachild";
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="lc-"]:before,
+[class*=" lc-"]:before {
+  font-family: "omegachild";
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lc-airport:before {
+  content: "a";
+}
+.lc-fuel:before {
+  content: "b";
+}
+.lc-helicopter:before {
+  content: "c";
+}
+.lc-map:before {
+  content: "d";
+}
+.lc-port:before {
+  content: "e";
+}
+.lc-river-1:before {
+  content: "f";
+}
+.lc-sea:before {
+  content: "g";
+}
+.lc-storage:before {
+  content: "h";
+}
+.lc-coordination:before {
+  content: "i";
+}
+.lc-im:before {
+  content: "j";
+}
+.lc-fixedwing:before {
+  content: "k";
+}
+.lc-omegachild:before {
+  content: "l";
+}
+.lc-river:before {
+  content: "m";
+}
+.lc-road:before {
+  content: "n";
+}
+.lc-road-transport:before {
+  content: "o";
+}
+.lc-im:before {
+  content: "j";
+}

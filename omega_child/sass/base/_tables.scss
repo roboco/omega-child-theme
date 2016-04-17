@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+th {
+  padding: 0.5em 1em;
+  color: #fff;
+  background-color: #c0392b;
+}
+th a,
+th a.active {
+  color: #fff;
+}
+th a img,
+th a.active img {
+  margin: 2px 3px;
+}
+
+td {
+  padding: 0.5em 1em;
+}
+
+tr.odd {
+  background: #e7f1f5;
+}
+
+tr.even {
+  background: #f6fafb;
+}
